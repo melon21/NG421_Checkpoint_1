@@ -14,6 +14,10 @@ export class TodoComponent implements OnInit {
   todoTitle = ''
   ngOnInit() {
   }
+  isEditing()
+  {
+return false;
+  }
   async deleteTodo(todo){
     let result;
     const modal = this.modalService.open(ConfirmationModalComponent);
@@ -28,6 +32,9 @@ export class TodoComponent implements OnInit {
       
     }
   }
-
+getStatuses()
+{
+  return this.todoService.getStatuses();
+}
 
 }

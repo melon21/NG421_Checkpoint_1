@@ -15,7 +15,7 @@ export class TodoListComponent implements OnInit {
   constructor(private todoService : TodoService) { }
   @Input() status: any;
 
-  get todoList() {
+  get todoList(): ITodo[] {
     return this.todoService.getTodos(this.status);
   }
   ngOnInit() {
