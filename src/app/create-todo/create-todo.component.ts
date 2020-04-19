@@ -7,14 +7,17 @@ import {TodoService} from '../services/todo.service';
   styleUrls: ['./create-todo.component.css']
 })
 export class CreateTodoComponent implements OnInit {
-  todoTitle = ''
+  todoTitle = '';
+
   constructor(private todoService : TodoService) { }
 
-  ngOnInit() {
+ngOnInit() {
   }
   addTodo():void {
     this.todoService.addTodo({
-      title: this.todoTitle
+      title: this.todoTitle,
+      status: 'Todo',
+      createdAt: new Date()
     });
     
     // resets our todoTitle variable to an empty string
