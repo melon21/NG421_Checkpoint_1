@@ -4,12 +4,17 @@ import {ITodo} from '../interfaces/itodo';
   providedIn: 'root'
 })
 export class TodoService {
+  statuses: Array<'Todo'| 'Doing' | 'Done'>;
   todoId: number = 0;
   todoList: ITodo [] = [
     // example of how to make an item in todo list
+   
     { title: 'Install Angular CLI', id: this.todoId },
-  
   ]
+  getStatuses()
+  {
+    return this.statuses;
+  }
   constructor() { }
   getTodos(){
     return this.todoList;
@@ -20,6 +25,6 @@ export class TodoService {
   }
   addTodo(todo: ITodo):void {
     todo.id = this.todoId ++;
-    todoList.push(todo);
+    this.todoList.push(todo);
   }
 }
