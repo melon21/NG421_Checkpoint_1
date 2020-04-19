@@ -9,12 +9,18 @@ import {TodoService} from '../services/todo.service';
   
 })
 
+
 export class TodoListComponent implements OnInit {
-  todoList: ITodo [] = [ ]
+  
   constructor(private todoService : TodoService) { }
   @Input() status: any;
+
+  get todoList() {
+    return this.todoService.getTodos(this.status);
+  }
   ngOnInit() {
-    this.todoList = this.todoService.getTodos();
+
   }
 
 }
+
