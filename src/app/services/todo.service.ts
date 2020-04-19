@@ -4,9 +4,8 @@ import {ITodo} from '../interfaces/itodo';
   providedIn: 'root'
 })
 export class TodoService {
-  //statuses: Array<'Todo'| 'Doing' | 'Done'>;
   statuses: string [] = [
-    'Todo', 'Doing', 'Done';
+    'Todo', 'Doing', 'Done'
   ]
   todoId: number = 0;
   todoList: ITodo [] = [

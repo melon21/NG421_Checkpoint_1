@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {ITodo} from '../interfaces/itodo';
+import {ITodo} from 'src/app/interfaces/itodo';
 import {TodoService} from '../services/todo.service';
 
 @Component({
