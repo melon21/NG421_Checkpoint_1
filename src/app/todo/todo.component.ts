@@ -25,7 +25,6 @@ return false;
     try {
       result = await modal.result;
       if(result === "yes") {
-        this.todoService.deleteTodo(todo);
       }
     }
     catch(ex){
