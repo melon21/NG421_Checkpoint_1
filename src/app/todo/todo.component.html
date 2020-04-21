@@ -2,7 +2,7 @@
     <label>{{todo.title}}</label>
     <div class="float-right">
         <button type="button" (click)= deleteTodo(todo) class="btn btn-danger btn-sm">Delete</button>
-        <button type="button" (click)=TodoEdit(componentInstance.todo)>Edit</button>
+        <button type="button" (click)=editTodo()>Edit</button>
         <select [(ngModel)]= 'todo.status'> 
             <option *ngFor='let status of getStatuses()'> {{status}}</option>
            

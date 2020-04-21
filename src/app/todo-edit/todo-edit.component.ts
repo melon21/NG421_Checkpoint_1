@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-todo-edit',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-edit.component.css']
 })
 export class TodoEditComponent implements OnInit {
+modalInstance: NgbModalRef;
+constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+ngOnInit() {
+}
+yes(){
+  this.modalInstance.close("yes");
+}
 }
